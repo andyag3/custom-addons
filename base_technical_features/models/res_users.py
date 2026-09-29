@@ -28,7 +28,7 @@ class ResUsers(models.Model):
         for user in self:
             user.show_technical_features = user in users
 
-    @api.depends("groups_id")
+    @api.depends("group_ids")
     def _compute_technical_features(self):
         """Map user membership to boolean field value"""
         users = self.env.ref("base_technical_features.group_technical_features").users
@@ -40,14 +40,14 @@ class ResUsers(models.Model):
         access"""
         group = self.env.ref("base_technical_features.group_technical_features")
         for user in self:
-            if self.env.ref("base.group_no_one") not in user.groups_id:
+            if self.env.ref("base.group_no_one") not in user.group_ids:
                 raise AccessError(
                     _("The user does not have access to technical " "features.")
                 )
         if user.technical_features:
-            self.sudo().write({"groups_id": [(4, group.id)]})
+            self.sudo().write({"group_ids": [(4, group.id)]})
         else:
-            self.sudo().write({"groups_id": [(3, group.id)]})
+            self.sudo().write({"group_ids": [(3, group.id)]})
 
     @property
     def SELF_READABLE_FIELDS(self):
