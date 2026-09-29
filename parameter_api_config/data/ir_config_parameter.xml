@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published
+    by the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<odoo noupdate="1">
+
+    <record id="ggmc_base_application_url" model="ir.config_parameter">
+        <field name="key">parameter_api_config.ggmc_base_application_url</field>
+        <field name="value">http://192.168.0.36/api/api</field>
+    </record>
+
+    <record id="ggmc_token" model="ir.config_parameter">
+        <field name="key">parameter_api_config.ggmc_token</field>
+        <field name="value"></field>
+    </record>
+
+    <record id="ggmc_username" model="ir.config_parameter">
+        <field name="key">parameter_api_config.ggmc_username</field>
+        <field name="value">Oodo</field>
+    </record>
+
+    <record id="ggmc_password" model="ir.config_parameter">
+        <field name="key">parameter_api_config.ggmc_password</field>
+        <field name="value">!@98I45?]</field>
+    </record>
+
+    <record id="fkUserLocation" model="ir.config_parameter">
+        <field name="key">parameter_api_config.fkUserLocation</field>
+        <field name="value">2025</field>
+    </record>
+
+    <record id="ggmc_default_records_limit" model="ir.config_parameter">
+        <field name="key">parameter_api_config.ggmc_default_records_limit</field>
+        <field name="value">14000</field>
+    </record>
+
+    <record id="ggmc_default_timeout_limit" model="ir.config_parameter">
+        <field name="key">parameter_api_config.ggmc_default_timeout_limit</field>
+        <field name="value">3000</field>
+    </record>
+
+</odoo>
+
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4-->
