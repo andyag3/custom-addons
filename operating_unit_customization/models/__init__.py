@@ -21,6 +21,7 @@ from . import account_journal
 from . import analytic_account
 from . import product_category
 from . import sale_order
+from . import sale_report
 
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
